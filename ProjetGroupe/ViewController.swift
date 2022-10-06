@@ -59,6 +59,7 @@ class ViewController: UIViewController {
         default:
             break
         }
+        print("bons")
     }
     
     
