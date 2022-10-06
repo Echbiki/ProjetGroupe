@@ -6,6 +6,9 @@ target 'ProjetGroupe' do
   use_frameworks!
 
   # Pods for ProjetGroupe
+  pod "PromiseKit", "~> 6.3.4"
+  pod 'Alamofire', '5.4.0'
+  pod 'SwiftyJSON', '~> 4.0'
 
   target 'ProjetGroupeTests' do
     inherit! :search_paths
