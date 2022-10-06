@@ -32,7 +32,7 @@ class ApiGif {
                            for item in dims {
                                dimension.append(item.intValue)
                            }
-                           gifs.append(Gif(url: itemGif["itemUrl"].stringValue, dims: dimension))
+                           gifs.append(Gif(urls: itemGif.dictionaryValue["url"]!.stringValue, dims: dimension))
                        }
                       
                    }

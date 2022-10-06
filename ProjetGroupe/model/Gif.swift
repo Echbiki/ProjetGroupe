@@ -8,11 +8,11 @@
 import Foundation
 
 class Gif {
-    var url : String
+    var urls : String
     var dims : [Int]
     
-    init(url:String, dims: [Int]){
-        self.url = url
+    init(urls:String, dims: [Int]){
+        self.urls = urls
         self.dims = dims
     }
         
