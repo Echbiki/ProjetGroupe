@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var Web: UIWebView!
     @IBOutlet weak var image: UIImageView!
     
-    var gif : [Gif] = []
+    //var gif : [Gif] = []
     
-    var g : Gif?
+    //var g : Gif?
     //@IBOutlet weak var swipeView: UIView!
     //@IBOutlet weak var img: UIImageView!
     /*@IBAction func SwipeAction(_ sender: Any) {

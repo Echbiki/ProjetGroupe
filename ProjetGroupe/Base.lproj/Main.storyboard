@@ -27,6 +27,9 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Vhw-XO-adi" kind="showDetail" id="GfU-HD-FOf"/>
+                                </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="esl-nr-gZK">
                                 <rect key="frame" x="0.0" y="820" width="414" height="44"/>
@@ -69,54 +72,38 @@
             </objects>
             <point key="canvasLocation" x="-2771.0144927536235" y="-524.33035714285711"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="a4f-AL-oKe">
+        <!--Random View-->
+        <scene sceneID="PLR-2g-HDX">
             <objects>
-                <tableViewController id="ChZ-Bi-pXP" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GJx-Ku-bUG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="Vhw-XO-adi" customClass="RandomView" customModule="ProjetGroupe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ysa-mx-WBa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oc-oH-Nq6">
+                                <rect key="frame" x="0.0" y="143" width="414" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Generation du GIF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE0-ns-DIf">
+                                <rect key="frame" x="107" y="50" width="211" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vBA-Xf-bvu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="2IY-S4-34p">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2IY-S4-34p" id="IpE-iU-eNI">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ChZ-Bi-pXP" id="KRR-OV-5ay"/>
-                            <outlet property="delegate" destination="ChZ-Bi-pXP" id="NNl-al-FAn"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="TfO-O0-MT9"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mqp-Ye-DYj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1032" y="-524"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="2vU-YY-atT">
-            <objects>
-                <navigationController id="5rJ-nv-ArV" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="7cK-RY-2Xq"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="joa-8z-z6x">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oa4-rg-4Qy">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
+                    </view>
+                    <navigationItem key="navigationItem" id="dSv-Oe-7Rk"/>
                     <connections>
-                        <segue destination="ChZ-Bi-pXP" kind="relationship" relationship="rootViewController" id="beX-C7-Ulr"/>
+                        <outlet property="Web" destination="5oc-oH-Nq6" id="idN-Eo-uYT"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KLz-h3-aDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSD-hn-uYq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1888" y="-524"/>
+            <point key="canvasLocation" x="-2694.202898550725" y="203.57142857142856"/>
         </scene>
     </scenes>
     <resources>

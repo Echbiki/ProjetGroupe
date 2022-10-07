@@ -10,6 +10,7 @@
 		780837D687D0B028E148B3F8 /* Pods_ProjetGroupeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 172F39FAE14C18D2619D54DE /* Pods_ProjetGroupeTests.framework */; };
 		820E1BD028EEFE570018D595 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 820E1BCF28EEFE560018D595 /* .gitignore */; };
 		823CFC8128EEF8A0002A11D8 /* Pods in Resources */ = {isa = PBXBuildFile; fileRef = 823CFC8028EEF8A0002A11D8 /* Pods */; };
+		8296B08F28F03109007EFE2C /* RandomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8296B08E28F03109007EFE2C /* RandomView.swift */; };
 		82AD74E528EED57B002C80E0 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AD74E428EED57B002C80E0 /* Gif.swift */; };
 		82AD74E828EED5D5002C80E0 /* ApiGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AD74E728EED5D5002C80E0 /* ApiGif.swift */; };
 		82F263B328E6E40100A809C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F263B228E6E40100A809C1 /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 		820E1BCF28EEFE560018D595 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		823CFC8028EEF8A0002A11D8 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
 		823CFC8428EEF95F002A11D8 /* ProjetGroupe */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ProjetGroupe; sourceTree = "<group>"; };
+		8296B08E28F03109007EFE2C /* RandomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomView.swift; sourceTree = "<group>"; };
 		82AD74E428EED57B002C80E0 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		82AD74E728EED5D5002C80E0 /* ApiGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiGif.swift; sourceTree = "<group>"; };
 		82F263AF28E6E40100A809C1 /* ProjetGroupe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetGroupe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				82AD74E428EED57B002C80E0 /* Gif.swift */,
+				8296B08E28F03109007EFE2C /* RandomView.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				82F263B728E6E40100A809C1 /* ViewController.swift in Sources */,
 				82F263B328E6E40100A809C1 /* AppDelegate.swift in Sources */,
 				82AD74E528EED57B002C80E0 /* Gif.swift in Sources */,
+				8296B08F28F03109007EFE2C /* RandomView.swift in Sources */,
 				82AD74E828EED5D5002C80E0 /* ApiGif.swift in Sources */,
 				82F263B528E6E40100A809C1 /* SceneDelegate.swift in Sources */,
 			);
