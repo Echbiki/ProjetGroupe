@@ -10,10 +10,11 @@ import SwiftyJSON
 import PromiseKit
 
 class ApiGif {
+    static var gifs: [Gif] = []
    
    //Fonction static pour ne pas a avoir a l'instancier a chaque fois qu'on veux la call
    static func getGifs() -> Promise<[Gif]> {
-       var gifs: [Gif] = []
+       
        
        // Gestion de l'asynchrone, on retourne une promesse
        return Promise { seal in
@@ -27,12 +28,12 @@ class ApiGif {
                if let gifsJSON = json?.dictionary?["results"]?.arrayValue {
                    for itemGif in gifsJSON {
                        
-                       if let dims = itemGif.dictionaryValue["media"]?.arrayValue[0].dictionaryValue["gif"]?.dictionaryValue["dims"]?.arrayValue {
+                       if let dims = itemGif.dictionaryValue["media"]?.arrayValue[0].dictionaryValue["nanogif"]?.dictionaryValue["url"]?.arrayValue {
                            var dimension: [Int] = []
                            for item in dims {
                                dimension.append(item.intValue)
                            }
-                           gifs.append(Gif(urls: itemGif.dictionaryValue["url"]!.stringValue, dims: dimension))
+                           ApiGif.gifs.append(Gif(urls: itemGif.dictionaryValue["media"]!.arrayValue[0].dictionaryValue["nanogif"]?.dictionaryValue["url"]?.stringValue ?? "", dims: dimension))
                        }
                       
                    }

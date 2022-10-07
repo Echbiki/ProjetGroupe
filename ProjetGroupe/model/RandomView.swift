@@ -10,25 +10,27 @@ import UIKit
 
 class RandomView:UIViewController{
     
-    @IBOutlet weak var Web: UIWebView!
     var gif : [Gif] = []
     
+    @IBOutlet weak var testGif: UIImageView!
     var g : Gif?
+    var url: String = ""
     
     override func viewDidLoad() {
         
         ApiGif.getGifs().done { gifs in
             self.gif = gifs
             
-            self.g = gifs [Int.random(in: 0...gifs.count - 1)]
+            self.g = gifs [Int.random(in: 0...gifs.count)]
             
             if let gifUrl = self.g?.urls{
-                if let url = URL(string: self.g!.urls){
-                    self.Web.loadRequest(URLRequest(url: url))
-                    
-                }
+                print(gifUrl)
+                self.url = gifUrl
+                
             super.viewDidLoad()
         }
+            print(self.url)
+            self.testGif.image = UIImage.gifImageWithURL(self.url)
 }
     }
 }

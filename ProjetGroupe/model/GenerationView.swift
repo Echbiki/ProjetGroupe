@@ -10,26 +10,79 @@ import UIKit
 
 class GenerationView:UIViewController{
     
-    @IBOutlet weak var Web: UIWebView!
+    var gif : [Gif] = []
     
-    var gifs: [Gif]?
+    var g : Gif?
+    var url: String = ""
+    @IBOutlet weak var testgif: UIImageView!
+    
     var currentGif: Gif?
     
     override func viewDidLoad() {
+        addSwipe()
         
         ApiGif.getGifs().done { gifs in
-            self.gifs = gifs
-            self.currentGif = gifs[0]
+            self.gif = gifs
+            
+            self.g = gifs [Int.random(in: 0...gifs.count)]
+            
+            if let gifUrl = self.g?.urls{
+                print(gifUrl)
+                self.url = gifUrl
+                
+            super.viewDidLoad()
         }
-    }
-    
-    
-    func getRandomGif() -> Gif? {
-        if let gifs = self.gifs {
-            return gifs[Int.random(in: 0...200)]
-        }
-        return nil
-    }
-    
-    
+            print(self.url)
+            self.testgif.image = UIImage.gifImageWithURL(self.url)
 }
+    }
+    
+    func addSwipe() {
+        let directions: [UISwipeGestureRecognizer.Direction] = [.up, .down]
+        for direction in directions {
+            let gesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
+               gesture.direction = direction
+            gesture.direction = direction
+            self.view.addGestureRecognizer(gesture)
+        }
+    }
+
+    @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
+        
+        switch sender.direction {
+        case .down:
+            ApiGif.getGifs().done { gifs in
+                self.gif = gifs
+                
+                self.g = gifs [Int.random(in: 0...gifs.count)]
+                
+                if let gifUrl = self.g?.urls{
+                    print(gifUrl)
+                    self.url = gifUrl
+                    
+                super.viewDidLoad()
+            }
+                print(self.url)
+                self.testgif.image = UIImage.gifImageWithURL(self.url)
+            }
+        case .up:
+                ApiGif.getGifs().done { gifs in
+                    self.gif = gifs
+                    
+                    self.g = gifs [Int.random(in: 0...gifs.count)]
+                    
+                    if let gifUrl = self.g?.urls{
+                        print(gifUrl)
+                        self.url = gifUrl
+                        
+                    super.viewDidLoad()
+                }
+                    print(self.url)
+                    self.testgif.image = UIImage.gifImageWithURL(self.url)
+                }
+        default:
+            break
+        }
+    }
+}
+

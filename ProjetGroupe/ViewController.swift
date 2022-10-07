@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             
         
         super.viewDidLoad()
-        //addSwipe()
+        addSwipe()
         
         //image.image = UIImage(named: "apple.jpg")
         
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
          
     }
     
-    /*func addSwipe() {
+    func addSwipe() {
         let directions: [UISwipeGestureRecognizer.Direction] = [.up, .down]
         for direction in directions {
             let gesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
@@ -66,8 +66,4 @@ class ViewController: UIViewController {
         }
        
     }
-    
-    
-    
-}*/
 }
