@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        ApiGif.getGifs().done { gifs in
+        /*ApiGif.getGifs().done { gifs in
             self.gif = gifs
             
             self.g = gifs [Int.random(in: 0...gifs.count - 1)]
@@ -41,9 +41,9 @@ class ViewController: UIViewController {
                     self.Web.loadRequest(URLRequest(url: url))
                     
                 }
-            }
+            }*/
             
-        }
+        
         super.viewDidLoad()
         //addSwipe()
         
@@ -51,8 +51,8 @@ class ViewController: UIViewController {
         
         //image.isUserInteractionEnabled = true
         
-        /*Web.loadRequest(NSURLRequest(url: URL(string: "https://media.tenor.com/gISSJc70lH4AAAAC/yeet-naruto.gif")!) as URLRequest)
-         */
+        Web.loadRequest(NSURLRequest(url: URL(string: "https://media.tenor.com/qrmNZcikNhEAAAAC/where-is-my-gif.gif")!) as URLRequest)
+         
     }
     
     /*func addSwipe() {
@@ -76,8 +76,9 @@ class ViewController: UIViewController {
             break
         }
        
-    }*/
+    }
     
     
     
+}*/
 }
