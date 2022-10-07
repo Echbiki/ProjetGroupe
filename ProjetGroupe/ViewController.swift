@@ -31,17 +31,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        /*ApiGif.getGifs().done { gifs in
-            self.gif = gifs
-            
-            self.g = gifs [Int.random(in: 0...gifs.count - 1)]
-            
-            if let gifUrl = self.g?.urls{
-                if let url = URL(string: self.g!.urls){
-                    self.Web.loadRequest(URLRequest(url: url))
-                    
-                }
-            }*/
             
         
         super.viewDidLoad()
