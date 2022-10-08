@@ -16,7 +16,7 @@ class GenerationView:UIViewController{
     var url: String = ""
     @IBOutlet weak var testgif: UIImageView!
     
-    var currentGif: Gif?
+    //var currentGif: Gif?
     
     override func viewDidLoad() {
         addSwipe()
@@ -37,6 +37,7 @@ class GenerationView:UIViewController{
 }
     }
     
+    //Fonction swipe vers le haut et vers le bas
     func addSwipe() {
         let directions: [UISwipeGestureRecognizer.Direction] = [.up, .down]
         for direction in directions {
@@ -47,6 +48,7 @@ class GenerationView:UIViewController{
         }
     }
 
+    
     @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
         
         switch sender.direction {

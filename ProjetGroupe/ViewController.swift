@@ -13,34 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var Web: UIWebView!
     @IBOutlet weak var image: UIImageView!
     
-    //var gif : [Gif] = []
-    
-    //var g : Gif?
-    //@IBOutlet weak var swipeView: UIView!
-    //@IBOutlet weak var img: UIImageView!
-    /*@IBAction func SwipeAction(_ sender: Any) {
-     
-     
-     print("hello i swiped")
-     }*/
-    
-    
-    //@IBOutlet weak var WebView: UIWebView!
-    
 
     
     override func viewDidLoad() {
         
             
         
-        super.viewDidLoad()
+    super.viewDidLoad()
+        
         addSwipe()
         
-        //image.image = UIImage(named: "apple.jpg")
-        
-        //image.isUserInteractionEnabled = true
-        
-        Web.loadRequest(NSURLRequest(url: URL(string: "https://media.tenor.com/qrmNZcikNhEAAAAC/where-is-my-gif.gif")!) as URLRequest)
+       Web.loadRequest(NSURLRequest(url: URL(string: "https://media.tenor.com/qrmNZcikNhEAAAAC/where-is-my-gif.gif")!) as URLRequest)
          
     }
     

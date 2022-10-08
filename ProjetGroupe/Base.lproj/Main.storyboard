@@ -31,13 +31,6 @@
                                     <segue destination="Vhw-XO-adi" kind="showDetail" id="GfU-HD-FOf"/>
                                 </connections>
                             </button>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="esl-nr-gZK">
-                                <rect key="frame" x="0.0" y="820" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Application Mobile GIF" width="423" id="ko9-ok-uum"/>
-                                </items>
-                            </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgv-k3-eSz">
                                 <rect key="frame" x="100" y="645" width="214" height="31"/>
                                 <state key="normal" title="Button"/>
@@ -46,6 +39,16 @@
                                     <segue destination="fKb-Ar-99z" kind="show" id="UNm-O3-BlU"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="esl-nr-gZK">
+                                <rect key="frame" x="0.0" y="827" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <barButtonItem title="Application Mobile GIF" width="423" id="ko9-ok-uum"/>
+                                </items>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" systemColor="systemBrownColor"/>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
@@ -83,20 +86,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iqV-QM-KvE">
-                                <rect key="frame" x="9" y="813" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Genération GIFS " width="386" id="UBS-TL-pew"/>
-                                </items>
-                            </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1J-jU-7tJ">
-                                <rect key="frame" x="20" y="123" width="374" height="597"/>
+                                <rect key="frame" x="20" y="180" width="374" height="626"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random GIF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cri-hA-i4p">
+                                <rect key="frame" x="105" y="107" width="205" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lMq-5E-DPb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="cri-hA-i4p" firstAttribute="leading" secondItem="lMq-5E-DPb" secondAttribute="leading" constant="105" id="1Vq-oF-9Gc"/>
+                            <constraint firstItem="lMq-5E-DPb" firstAttribute="trailing" secondItem="cri-hA-i4p" secondAttribute="trailing" constant="104" id="ny7-VM-baX"/>
+                            <constraint firstItem="cri-hA-i4p" firstAttribute="top" secondItem="lMq-5E-DPb" secondAttribute="top" constant="19" id="xxE-3c-UaU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OOb-qb-lbn"/>
                     <connections>
@@ -115,27 +122,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiens Ton GIF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE0-ns-DIf">
-                                <rect key="frame" x="107" y="50" width="158" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zHY-1S-vdI">
                                 <rect key="frame" x="20" y="115" width="374" height="656"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="656" id="mjM-Qp-f06"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generation GIF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE0-ns-DIf">
+                                <rect key="frame" x="120" y="52" width="175" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vBA-Xf-bvu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
                         <constraints>
                             <constraint firstItem="vBA-Xf-bvu" firstAttribute="trailing" secondItem="zHY-1S-vdI" secondAttribute="trailing" constant="20" id="2wD-LA-bul"/>
-                            <constraint firstItem="zHY-1S-vdI" firstAttribute="top" secondItem="DE0-ns-DIf" secondAttribute="bottom" constant="32" id="4sb-NX-fPK"/>
+                            <constraint firstItem="zHY-1S-vdI" firstAttribute="top" secondItem="DE0-ns-DIf" secondAttribute="bottom" constant="30" id="4sb-NX-fPK"/>
                             <constraint firstItem="vBA-Xf-bvu" firstAttribute="bottom" secondItem="zHY-1S-vdI" secondAttribute="bottom" constant="37" id="bsg-u8-yYi"/>
+                            <constraint firstItem="vBA-Xf-bvu" firstAttribute="trailing" secondItem="DE0-ns-DIf" secondAttribute="trailing" constant="119" id="gxX-V4-kjp"/>
                             <constraint firstItem="zHY-1S-vdI" firstAttribute="leading" secondItem="vBA-Xf-bvu" secondAttribute="leading" constant="20" id="qQb-pC-zET"/>
-                            <constraint firstItem="DE0-ns-DIf" firstAttribute="leading" secondItem="vBA-Xf-bvu" secondAttribute="leading" constant="107" id="t6A-Pd-lya"/>
+                            <constraint firstItem="DE0-ns-DIf" firstAttribute="top" secondItem="vBA-Xf-bvu" secondAttribute="top" constant="52" id="yjQ-sc-rEZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dSv-Oe-7Rk"/>
@@ -167,9 +175,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
