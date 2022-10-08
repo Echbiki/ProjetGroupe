@@ -13,7 +13,10 @@ class RandomView:UIViewController{
     var gif : [Gif] = []
     
     @IBOutlet weak var testGif: UIImageView!
+    
+    
     var g : Gif?
+    
     var url: String = ""
     
     override func viewDidLoad() {

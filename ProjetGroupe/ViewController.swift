@@ -21,32 +21,10 @@ class ViewController: UIViewController {
         
     super.viewDidLoad()
         
-        addSwipe()
-        
+       
+     //Affichage de l'image a partir de l'URL
        Web.loadRequest(NSURLRequest(url: URL(string: "https://media.tenor.com/qrmNZcikNhEAAAAC/where-is-my-gif.gif")!) as URLRequest)
          
     }
-    
-    func addSwipe() {
-        let directions: [UISwipeGestureRecognizer.Direction] = [.up, .down]
-        for direction in directions {
-            let gesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
-               gesture.direction = direction
-            gesture.direction = direction
-            self.view.addGestureRecognizer(gesture)
-        }
-    }
-
-    @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
-        
-        switch sender.direction {
-        case .down:
-            image.image = UIImage(named: "apple.jpg")
-        case .up:
-            image.image = UIImage(named: "logo.jpg")
-        default:
-            break
-        }
-       
-    }
 }
+    
